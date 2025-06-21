@@ -16,7 +16,6 @@ export const ToggleThemeButton = ({ isDark, toggleTheme }: Props) => {
 
 const IconButton = styled.button`
   position: fixed;
-  top: 10px;
   right: 10px;
   background: ${({ theme }) => theme.colors.primary};
   border: none;

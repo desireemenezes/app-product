@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   /* Variáveis CSS baseadas no tema */
   :root {
     --background: ${({ theme }) => theme.colors.background};
+    --backgroundContainer: ${({ theme }) => theme.colors.backgroundContainer};
     --text: ${({ theme }) => theme.colors.text};
     --primary: ${({ theme }) => theme.colors.primary};
     --error: ${({ theme }) => theme.colors.error};

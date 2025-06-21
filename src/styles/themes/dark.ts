@@ -1,10 +1,11 @@
 export const darkTheme = {
   name: "dark",
   colors: {
-    background: "#121212", // fundo escuro típico (quase preto)
+    background: "#111", // fundo escuro típico (quase preto)
+    backgroundContainer: "#111",
     textLabel: "#fff",
     text: "#ffffff", // texto claro para contraste
     error: "#CF6679", // tom avermelhado suave para erros
-    primary: "#BB86FC", // roxo claro para botões e links (equivalente ao 6200EE do light)
+    primary: "#6200EE", // roxo claro para botões e links (equivalente ao 6200EE do light)
   },
 };
