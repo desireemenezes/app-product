@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface SidebarContainerProps {
-  isOpen: boolean;
+  $isOpen: boolean; // o cifrão evita repassar ao DOM
 }
 
 export const SidebarContainer = styled.nav<SidebarContainerProps>`
@@ -21,8 +21,9 @@ export const SidebarContainer = styled.nav<SidebarContainerProps>`
     top: 0;
     height: 100%;
     z-index: 1000;
-    transform: ${({ isOpen }) =>
-      isOpen ? "translateX(0)" : "translateX(-100%)"};
+    transform: ${({ $isOpen }) =>
+      $isOpen ? "translateX(0)" : "translateX(-100%)"};
+  ...
   }
 `;
 
@@ -44,9 +45,10 @@ export const MenuLink = styled.a`
   text-decoration: none;
   font-weight: 500;
   cursor: pointer;
+  transition: opacity 0.2s ease;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: #00000015;
   }
 `;
 

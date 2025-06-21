@@ -15,7 +15,7 @@ interface SidebarProps {
 export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
   return (
     <>
-      <SidebarContainer isOpen={isOpen}>
+      <SidebarContainer $isOpen={isOpen}>
         <MenuList>
           <MenuItem>
             <MenuLink href="/">

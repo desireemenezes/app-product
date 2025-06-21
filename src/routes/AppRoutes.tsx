@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "../features/dashboard";
+import { Loading } from "../components/Loading/Loading";
 import { Suspense, lazy } from "react";
 
+const Dashboard = lazy(() => import("../features/dashboard"));
 const Products = lazy(() => import("../features/products"));
 
 export const AppRoutes = () => (
   <BrowserRouter>
-    <Suspense fallback={<p>Carregando...</p>}>
+    <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/products" element={<Products />} />
