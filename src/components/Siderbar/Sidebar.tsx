@@ -1,9 +1,11 @@
+import { useLogout } from "../../hooks/useLogout";
 import {
   SidebarContainer,
   MenuList,
   MenuItem,
   MenuLink,
   Overlay,
+  LogoutButton,
 } from "./Sidebar.styles";
 import { FaTachometerAlt, FaBoxOpen } from "react-icons/fa"; // Ícones para dashboard e produtos
 
@@ -13,6 +15,8 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
+  const logout = useLogout();
+
   return (
     <>
       <SidebarContainer $isOpen={isOpen}>
@@ -30,6 +34,7 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
             </MenuLink>
           </MenuItem>
         </MenuList>
+        <LogoutButton onClick={logout}>Sair</LogoutButton>
       </SidebarContainer>
       {/* Overlay para fechar sidebar clicando fora */}
       {isOpen && <Overlay onClick={onClose} />}

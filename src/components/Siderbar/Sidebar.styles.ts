@@ -5,6 +5,10 @@ interface SidebarContainerProps {
 }
 
 export const SidebarContainer = styled.nav<SidebarContainerProps>`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Empurra conteúdo e botão para o fim */
+
   width: 180px;
   background-color: ${({ theme }) => theme.colors.background};
   box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1); // sombra leve na direita
@@ -59,5 +63,25 @@ export const Overlay = styled.div`
   z-index: 900;
   @media (min-width: 769px) {
     display: none;
+  }
+`;
+
+export const LogoutButton = styled.button`
+  width: calc(100% - 48px);
+  margin: 1rem 24px;
+  padding: 5px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.background};
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primary}cc;
   }
 `;

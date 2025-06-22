@@ -6,14 +6,17 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import { ThemeProvider } from "./theme/ThemeContext"; // ajuste caminho conforme seu projeto
 
 import { App } from "./App";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <QueryClientProvider client={queryClient}>
-    <ThemeProvider>
-      <GlobalStyle />
-      <App>
-        <AppRoutes />
-      </App>
-    </ThemeProvider>
-  </QueryClientProvider>
+  <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider>
+        <GlobalStyle />
+        <App>
+          <AppRoutes />
+        </App>
+      </ThemeProvider>
+    </QueryClientProvider>
+  </BrowserRouter>
 );
