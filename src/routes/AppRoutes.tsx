@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { Loading } from "../components/Loading/Loading";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Loading } from "../shared/components/Loading/Loading";
 import { Suspense, lazy } from "react";
-import { Login } from "../pages/Login";
+import { Login } from "../features/auth/index";
 import { RequireAuth } from "./RequireAuth";
 import { PublicRoute } from "./PublicRoute";
 

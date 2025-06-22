@@ -1,9 +1,9 @@
-import { Header } from "./components/Header/Header";
-import { Sidebar } from "./components/Siderbar/Sidebar";
-import { useThemeContext } from "./theme/ThemeContext"; // novo hook
-import { Container } from "./components/Container/Container";
-import { useSidebar } from "./hooks/useValidateSidebar";
-import { useIsLoginPage } from "./hooks/useIsLoginPage";
+import { Header } from "./shared/components/Header/Header";
+import { Sidebar } from "./shared/components/Siderbar/Sidebar";
+import { useThemeContext } from "./shared/theme/ThemeContext"; // novo hook
+import { Container } from "./shared/components/Container/Container";
+import { useSidebar } from "./shared/hooks/useValidateSidebar";
+import { useIsLoginPage } from "./shared/hooks/useIsLoginPage";
 
 interface AppProps {
   children: React.ReactNode;
