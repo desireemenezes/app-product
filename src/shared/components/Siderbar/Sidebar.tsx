@@ -1,4 +1,3 @@
-import { useLogout } from "../../hooks/useLogout";
 import {
   SidebarContainer,
   MenuList,
@@ -8,6 +7,8 @@ import {
   LogoutButton,
 } from "./Sidebar.styles";
 import { FaTachometerAlt, FaBoxOpen } from "react-icons/fa"; // Ícones para dashboard e produtos
+import { Link } from "react-router-dom";
+import { useLogout } from "../../../features/auth/hooks/useLogout";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -22,13 +23,13 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
       <SidebarContainer $isOpen={isOpen}>
         <MenuList>
           <MenuItem>
-            <MenuLink href="/">
+            <MenuLink as={Link} to="/dashboard">
               <FaTachometerAlt style={{ marginRight: "8px" }} />
               Dashboard
             </MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink href="/products">
+            <MenuLink as={Link} to="/products">
               <FaBoxOpen style={{ marginRight: "8px" }} />
               Produtos
             </MenuLink>

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-export function useIsLoginPage() {
+export function useAuthPage() {
   const location = useLocation();
-  return location.pathname === "/login";
+  return location.pathname === "/auth";
 }

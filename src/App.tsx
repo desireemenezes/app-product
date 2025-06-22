@@ -3,7 +3,7 @@ import { Sidebar } from "./shared/components/Siderbar/Sidebar";
 import { useThemeContext } from "./shared/theme/ThemeContext"; // novo hook
 import { Container } from "./shared/components/Container/Container";
 import { useSidebar } from "./shared/hooks/useValidateSidebar";
-import { useIsLoginPage } from "./shared/hooks/useIsLoginPage";
+import { useAuthPage } from "./features/auth/hooks/useAuth";
 
 interface AppProps {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ interface AppProps {
 export function App({ children }: AppProps) {
   const { sidebarOpen, toggleSidebar, closeSidebar } = useSidebar();
   const { isDark, toggleTheme } = useThemeContext();
-  const isLoginPage = useIsLoginPage();
+  const isLoginPage = useAuthPage();
 
   return (
     <>

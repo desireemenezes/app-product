@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Loading } from "../shared/components/Loading/Loading";
 import { Suspense, lazy } from "react";
-import { Login } from "../features/auth/index";
 import { RequireAuth } from "./RequireAuth";
+import { AuthPage } from "../features/auth/AuthPage";
 import { PublicRoute } from "./PublicRoute";
 
 const Dashboard = lazy(() => import("../features/dashboard"));
@@ -12,10 +12,10 @@ export const AppRoutes = () => (
   <Suspense fallback={<Loading />}>
     <Routes>
       <Route
-        path="/login"
+        path="/auth"
         element={
           <PublicRoute>
-            <Login />
+            <AuthPage />
           </PublicRoute>
         }
       />
@@ -38,8 +38,10 @@ export const AppRoutes = () => (
         }
       />
 
-      {/* Redireciona rota raiz para /login */}
-      <Route path="/" element={<Navigate to="/login" replace />} />
+      {/* Redireciona raiz para /auth */}
+      <Route path="/" element={<Navigate to="/auth" replace />} />
+      {/* Rota coringa */}
+      <Route path="*" element={<Navigate to="/auth" replace />} />
     </Routes>
   </Suspense>
 );

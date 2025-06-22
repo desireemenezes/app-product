@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LoginContainer = styled.div`
-  height: 100vh;
+  height: 45vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,4 +52,54 @@ export const ErrorMessage = styled.p`
   margin-bottom: 1rem;
   font-size: 0.9rem;
   text-align: center;
+`;
+
+export const Container = styled.div`
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: ${({ theme }) => theme.colors.backgroundContainer};
+`;
+
+export const Tabs = styled.div`
+  display: flex;
+  margin-bottom: 1rem;
+`;
+
+export const TabButton = styled.button<{ active: boolean }>`
+  flex: 1;
+  padding: 0.6rem;
+  background: ${({ active, theme }) =>
+    active ? theme.colors.primary : "transparent"};
+  color: ${({ active, theme }) => (active ? "white" : theme.colors.textLabel)};
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.primary}cc;
+    color: white;
+  }
+`;
+
+export const SwitchContainer = styled.div`
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+`;
+
+export const SwitchButton = styled.button`
+  background: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+
+  &:hover {
+    color: #0056b3;
+  }
 `;

@@ -5,23 +5,28 @@ import {
   Button,
   ErrorMessage,
   Title,
-} from "./Login.styles";
-import { useLogin } from "./hooks/useLogin";
+} from "./Auth.styles";
+import { useRegister } from "./hooks/useRegister";
 
-export function Login() {
-  const { email, password, error, setEmail, setPassword, handleLogin } =
-    useLogin();
+interface RegisterProps {
+  onSuccess: () => void;
+}
+
+export function Register({ onSuccess }: RegisterProps) {
+  const { email, password, error, setEmail, setPassword, handleRegister } =
+    useRegister(onSuccess);
 
   return (
     <LoginContainer>
-      <LoginForm onSubmit={handleLogin}>
-        <Title>Entrar</Title>
+      <LoginForm onSubmit={handleRegister}>
+        <Title>Cadastro</Title>
 
         <Input
           type="email"
           placeholder="E-mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          autoComplete="email"
         />
 
         <Input
@@ -29,11 +34,12 @@ export function Login() {
           placeholder="Senha"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          autoComplete="new-password"
         />
 
         {error && <ErrorMessage>{error}</ErrorMessage>}
 
-        <Button type="submit">Entrar</Button>
+        <Button type="submit">Registrar</Button>
       </LoginForm>
     </LoginContainer>
   );

@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { useAuthStorage } from "./useAuthStorage";
 import { toast } from "react-toastify";
 
-export function useLogin() {
-  const { login, error, setError } = useAuthStorage();
+export function useRegister(onSuccess: () => void) {
+  const { register, error, setError } = useAuthStorage();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
@@ -18,11 +18,12 @@ export function useLogin() {
       return setError("Preencha todos os campos.");
     }
 
-    const success = login(email, password);
+    const success = register(email, password);
 
     if (success) {
-      toast.success("Login realizado com sucesso!");
-      navigate("/dashboard");
+      toast.success("Cadastro realizado com sucesso!");
+      onSuccess();
+      // Opcional: navegar para login, mas onSuccess geralmente faz isso
     } else {
       toast.error(error);
     }
@@ -34,6 +35,6 @@ export function useLogin() {
     error,
     setEmail,
     setPassword,
-    handleLogin,
+    handleRegister,
   };
 }
