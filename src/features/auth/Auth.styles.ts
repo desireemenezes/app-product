@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LoginContainer = styled.div`
-  height: 45vh;
+  height: 90vh; /* ocupa toda a altura da tela */
   display: flex;
   justify-content: center;
   align-items: center;

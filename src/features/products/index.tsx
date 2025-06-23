@@ -1,4 +1,5 @@
-import { useProductsQuery } from "../products/hooks/useProducts";
+import { useProductsQuery } from "../../shared/products/hooks/useProducts";
+import { Title } from "../dashboard";
 
 function Products() {
   const { data, isLoading } = useProductsQuery();
@@ -6,10 +7,10 @@ function Products() {
   if (isLoading) return <p>Carregando produtos...</p>;
 
   return (
-    <div>
-      <h2>Produtos</h2>
+    <main>
+      <Title>Produtos</Title>
       <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
+    </main>
   );
 }
 

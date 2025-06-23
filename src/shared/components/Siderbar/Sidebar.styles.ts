@@ -10,7 +10,7 @@ export const SidebarContainer = styled.nav<SidebarContainerProps>`
   justify-content: space-between; /* Empurra conteúdo e botão para o fim */
 
   width: 180px;
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.backgroundContainer};
   box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1); // sombra leve na direita
   padding: 1rem 0;
   position: fixed;

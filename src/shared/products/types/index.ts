@@ -2,9 +2,11 @@ export interface IProduct {
   id: number;
   image: string;
   name: string;
-  category: string;
+  categories: string;
   price: number;
   brand: string;
+  amount: number;
+  createdAt: string;
 }
 
 export interface IResponseProducts {

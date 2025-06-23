@@ -27,7 +27,10 @@ export function App({ children }: AppProps) {
           <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
         </>
       )}
-      <Container onClick={sidebarOpen ? closeSidebar : undefined}>
+      <Container
+        onClick={sidebarOpen ? closeSidebar : undefined}
+        isAuthPage={!isLoginPage}
+      >
         {children}
       </Container>
     </>
