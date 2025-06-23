@@ -1,16 +1,19 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import compression from "vite-plugin-compression";
+import { defineConfig as defineVitestConfig } from "vitest/config";
 
-export default defineConfig({
-  plugins: [
-    react(),
-    compression(), // habilita gzip e brotli na build
-  ],
+export default defineVitestConfig({
+  plugins: [react(), compression()],
   esbuild: {
-    target: "es2018", // gera bundle moderno para navegadores recentes
+    target: "es2018",
   },
   build: {
-    minify: "esbuild", // já é padrão, mas pode explicitar
+    minify: "esbuild",
+  },
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: "./src/setupTests.ts",
+    include: ["src/**/*.{test,spec}.{js,ts,jsx,tsx}"],
   },
 });
