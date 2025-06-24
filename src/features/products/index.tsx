@@ -1,27 +1,52 @@
-import { useState } from "react";
 import { Title } from "../dashboard";
 import { SkeletonTable } from "./components/Skeleton/SkeletonTable";
 import { ProductsTable } from "./components/ProductsTable/ProductsTable";
 import { Pagination } from "./components/Pagination/Pagination";
-import { usePagedProductsQuery } from "../../shared/products/api";
+import { useIsMobile } from "../../shared/hooks/useIsMobile";
+import { ProductsList } from "./components/ProductsList/ProductsList";
+import { DeleteModal } from "./components/Modals/DeleteModal";
+import { useProducts } from "../../shared/products/hooks/useProducts";
 
 export function Products() {
-  const [page, setPage] = useState(1);
-  const itemsPerPage = 10;
-
-  const { data, isLoading } = usePagedProductsQuery(page, itemsPerPage);
-
-  const totalPages = data ? Math.ceil(data.total / itemsPerPage) : 0;
+  const isMobile = useIsMobile();
+  const {
+    page,
+    setPage,
+    filter,
+    setFilter,
+    productToDelete,
+    setProductToDelete,
+    filteredProducts,
+    isLoading,
+    totalPages,
+    handleDelete,
+    confirmDelete,
+  } = useProducts(10);
 
   return (
     <main>
       <Title>Produtos</Title>
 
       {isLoading ? (
-        <SkeletonTable rows={itemsPerPage} />
+        <SkeletonTable rows={10} />
       ) : (
         <>
-          <ProductsTable products={data?.products || []} />
+          {isMobile ? (
+            <ProductsList
+              products={filteredProducts}
+              onDelete={handleDelete}
+              onEdit={(id) => console.log("Editar", id)}
+            />
+          ) : (
+            <ProductsTable
+              products={filteredProducts}
+              onDelete={handleDelete}
+              onEdit={(id) => console.log("Editar", id)}
+              onAdd={() => console.log("Adicionar")}
+              filterValue={filter}
+              onFilterChange={setFilter}
+            />
+          )}
           <Pagination
             totalPages={totalPages}
             currentPage={page}
@@ -29,6 +54,13 @@ export function Products() {
           />
         </>
       )}
+
+      <DeleteModal
+        isOpen={!!productToDelete}
+        onClose={() => setProductToDelete(null)}
+        onConfirm={confirmDelete}
+        productName={productToDelete?.name}
+      />
     </main>
   );
 }
