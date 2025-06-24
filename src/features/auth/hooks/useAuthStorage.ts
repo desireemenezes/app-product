@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export interface AuthUser {
   email: string;
@@ -10,6 +10,14 @@ const SESSION_KEY = "isAuthenticated";
 
 export function useAuthStorage() {
   const [error, setError] = useState("");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthLoading, setIsAuthLoading] = useState(true);
+
+  useEffect(() => {
+    const session = localStorage.getItem(SESSION_KEY);
+    setIsAuthenticated(session === "true");
+    setIsAuthLoading(false);
+  }, []);
 
   const getUsers = (): AuthUser[] => {
     const stored = localStorage.getItem(AUTH_KEY);
@@ -20,7 +28,7 @@ export function useAuthStorage() {
     localStorage.setItem(AUTH_KEY, JSON.stringify(users));
   };
 
-  const register = (email: string, password: string) => {
+  const register = (email: string, password: string): boolean => {
     setError("");
     const users = getUsers();
     const userExists = users.some((user) => user.email === email);
@@ -40,7 +48,7 @@ export function useAuthStorage() {
     return true;
   };
 
-  const login = (email: string, password: string) => {
+  const login = (email: string, password: string): boolean => {
     setError("");
     const users = getUsers();
     const user = users.find(
@@ -53,15 +61,13 @@ export function useAuthStorage() {
     }
 
     localStorage.setItem(SESSION_KEY, "true");
+    setIsAuthenticated(true);
     return true;
   };
 
   const logout = () => {
     localStorage.removeItem(SESSION_KEY);
-  };
-
-  const isAuthenticated = (): boolean => {
-    return localStorage.getItem(SESSION_KEY) === "true";
+    setIsAuthenticated(false);
   };
 
   return {
@@ -71,5 +77,6 @@ export function useAuthStorage() {
     login,
     logout,
     isAuthenticated,
+    isAuthLoading,
   };
 }

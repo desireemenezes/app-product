@@ -1,32 +1,15 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthStorage } from "./useAuthStorage";
-import { toast } from "react-toastify";
+import { useAuthForm } from "./useAuthForm";
 
 export function useLogin() {
-  const { login, error, setError } = useAuthStorage();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { login, error } = useAuthStorage();
   const navigate = useNavigate();
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-
-    if (!email || !password) {
-      toast.error("Preencha todos os campos.");
-      return setError("Preencha todos os campos.");
-    }
-
-    const success = login(email, password);
-
-    if (success) {
-      toast.success("Login realizado com sucesso!");
-      navigate("/dashboard");
-    } else {
-      toast.error(error);
-    }
-  };
+  const { email, password, handleSubmit, setEmail, setPassword } = useAuthForm(
+    login,
+    () => navigate("/dashboard")
+  );
 
   return {
     email,
@@ -34,6 +17,6 @@ export function useLogin() {
     error,
     setEmail,
     setPassword,
-    handleLogin,
+    handleLogin: handleSubmit,
   };
 }

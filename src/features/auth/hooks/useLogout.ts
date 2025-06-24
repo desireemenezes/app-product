@@ -7,6 +7,6 @@ export function useLogout() {
 
   return () => {
     logout();
-    navigate("/auth", { replace: true });
+    navigate("/", { replace: true });
   };
 }
