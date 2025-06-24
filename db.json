@@ -5,7 +5,7 @@
       "image": "https://savegnago.vteximg.com.br/arquivos/ids/291388_2",
       "name": "Mostarda Kuhne 255g Levemente Picante",
       "categories": "Bazar",
-      "price": "18.69",
+      "price": 18.69,
       "brand": "Kuhne",
       "amount": 1,
       "createdAt": "2025-06-21T15:00:00.000Z"
@@ -15,18 +15,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Cut_Green_Beans.jpg",
       "name": "Vagem Macarrao Organica Solo Vivo 400g",
       "categories": "Hortifruti do google",
-      "price": "8.90",
+      "price": 8.9,
       "brand": "chão",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70713537",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/289634_2",
-      "name": "Vinho Chileno Leon De Tarapacá 750ml Cabernet Sauvignon",
-      "categories": "Bebidas",
-      "price": 64.9,
-      "brand": "León Tarapacá",
       "amount": 1,
       "createdAt": "2025-06-21T15:00:00.000Z"
     },
@@ -81,72 +71,12 @@
       "createdAt": "2025-06-21T15:00:00.000Z"
     },
     {
-      "id": "70704904",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/289908_2",
-      "name": "Bebida Máquina Pilão 104g Café Espresso 12",
-      "categories": "Mercearia",
-      "price": 26.6,
-      "brand": "Pilão",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
       "id": "70705942",
       "image": "https://savegnago.vteximg.com.br/arquivos/ids/447240_2",
       "name": "Bala Gelatina Fini 90g Ice Cream",
       "categories": "Mercearia",
       "price": 6.99,
       "brand": "Fini",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70705544",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/289629_2",
-      "name": "Vinho Chileno Concha Y Toro Reservado 750ml Sauvignon Blanc",
-      "categories": "Bebidas",
-      "price": 35.9,
-      "brand": "Concha Y Toro",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70713955",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/294283_2",
-      "name": "Condicionador Pantene 400ml Cachos Definid",
-      "categories": "Perfumaria E Beleza",
-      "price": 26.4,
-      "brand": "Pantene",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70709351",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/299347_2",
-      "name": "Cereal Mucilon 180g Sac Ameixa-Aveia",
-      "categories": "Mercearia",
-      "price": 6.99,
-      "brand": "Mucilon",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70710398",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/289321_2",
-      "name": "Cereal Barra Nuts Linea 50g Tradicional",
-      "categories": "Mercearia",
-      "price": 9.56,
-      "brand": "Linea",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70711199",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/281910_2",
-      "name": "Leite Fermentado Liquido Activia 170g Sem Lactose Ameixa",
-      "categories": "Laticínios",
-      "price": 3.29,
-      "brand": "Activa",
       "amount": 1,
       "createdAt": "2025-06-21T15:00:00.000Z"
     },
@@ -160,26 +90,7 @@
       "amount": 1,
       "createdAt": "2025-06-21T15:00:00.000Z"
     },
-    {
-      "id": "70709073",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/446805_2",
-      "name": "Sabonete Antibacterial Rexona 84g Limpeza Profunda",
-      "categories": "Perfumaria E Beleza",
-      "price": 1.58,
-      "brand": "Rexona",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70709547",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/445533_2",
-      "name": "Lápis Sobrancelha Vult 1,2g 003",
-      "categories": "Perfumaria E Beleza",
-      "price": 14.79,
-      "brand": "Vult",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
+
     {
       "id": "70703240",
       "image": "https://savegnago.vteximg.com.br/arquivos/ids/269657_2",
@@ -211,26 +122,6 @@
       "createdAt": "2025-06-21T15:00:00.000Z"
     },
     {
-      "id": "70705825",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/444853_2",
-      "name": "Oleo Canola Salada 900ml Especial",
-      "categories": "Mercearia",
-      "price": 9.98,
-      "brand": "Salada",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70713283",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/449495_2",
-      "name": "Loção Hidratante Dove 200ml Nutri Essencial",
-      "categories": "Perfumaria E Beleza",
-      "price": 12.49,
-      "brand": "Dove",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
       "id": "70710844",
       "image": "https://savegnago.vteximg.com.br/arquivos/ids/290619_2",
       "name": "Cachaca Salinas 700ml Umburana",
@@ -247,56 +138,6 @@
       "categories": "Laticínios",
       "price": 2.99,
       "brand": "Nesfit",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70715085",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/272241_2",
-      "name": "Churrasq Mor Montana",
-      "categories": "Bazar E Utilidades",
-      "price": 137.9,
-      "brand": "Mor",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70706640",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/449424_2",
-      "name": "Pao Pita Bread 300g Mini Sirio",
-      "categories": "Padaria",
-      "price": 8.19,
-      "brand": "Wickbold",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70714886",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/294824_2",
-      "name": "Tintura Nutrisse Aveia 60",
-      "categories": "Perfumaria E Beleza",
-      "price": 24.9,
-      "brand": "Nutrisse",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70711087",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/282561_2",
-      "name": "Alho Granulado Kisabor 30g",
-      "categories": "Mercearia",
-      "price": 4.48,
-      "brand": "Kisabor",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70710521",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/289942_2",
-      "name": "Iogurte Polpa Activia 120g Pedaços Frutas Silvestres",
-      "categories": "Laticínios",
-      "price": 3.65,
-      "brand": "Activa",
       "amount": 1,
       "createdAt": "2025-06-21T15:00:00.000Z"
     },
@@ -319,32 +160,12 @@
       "createdAt": "2025-06-21T15:00:00.000Z"
     },
     {
-      "id": "70710647",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/291386_2",
-      "name": "Mini Milho Conserva Kuhne 110g",
-      "categories": "Mercearia",
-      "price": 15.39,
-      "brand": "Kuhne",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
       "id": "70713073",
       "image": "https://savegnago.vteximg.com.br/arquivos/ids/293823_2",
       "name": "Vinho Chileno Emiliana Adobe 750ml Pinot Noir Tinto",
       "categories": "Bebidas",
       "price": 95.9,
       "brand": "Emiliana",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70714714",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/286944_2",
-      "name": "Joelho Da Paleta Resfriado 1,200kg Bandeja",
-      "categories": "Carnes",
-      "price": 17.88,
-      "brand": "Sem Marca",
       "amount": 1,
       "createdAt": "2025-06-21T15:00:00.000Z"
     },
@@ -358,16 +179,7 @@
       "amount": 1,
       "createdAt": "2025-06-21T15:00:00.000Z"
     },
-    {
-      "id": "70703581",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/304479_2",
-      "name": "Biscoito Rosquinha Galo 400g Coco",
-      "categories": "Mercearia",
-      "price": 3.99,
-      "brand": "Galo",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
+
     {
       "id": "70710202",
       "image": "https://savegnago.vteximg.com.br/arquivos/ids/291056_2",
@@ -388,16 +200,7 @@
       "amount": 1,
       "createdAt": "2025-06-21T15:00:00.000Z"
     },
-    {
-      "id": "70714265",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/448031_2",
-      "name": "Creme Pentear Niely Gold 250g Liso Pleno",
-      "categories": "Perfumaria E Beleza",
-      "price": 8.39,
-      "brand": "Niely Gold",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
+
     {
       "id": "70714498",
       "image": "https://savegnago.vteximg.com.br/arquivos/ids/265409_2",
@@ -409,52 +212,12 @@
       "createdAt": "2025-06-21T15:00:00.000Z"
     },
     {
-      "id": "70710885",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/284377_2",
-      "name": "Cerveja Martina Witbier 600ml",
-      "categories": "Bebidas",
-      "price": 13.29,
-      "brand": "Martina",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70713414",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/284786_2",
-      "name": "Sabonete Liquid Anti Bacteriano Maos Protex 250ml Vitamina E",
-      "categories": "Perfumaria E Beleza",
-      "price": 11.98,
-      "brand": "Protex",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
       "id": "70706699",
       "image": "https://savegnago.vteximg.com.br/arquivos/ids/275541_2",
       "name": "Cookie Jasmine 150g Integ Limao",
       "categories": "Mercearia",
       "price": 6.99,
       "brand": "Jasmine",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70715255",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/273300_2",
-      "name": "Locao Hidrat Paixao 200ml Paixao Irresist",
-      "categories": "Perfumaria E Beleza",
-      "price": 9.95,
-      "brand": "Paixão",
-      "amount": 1,
-      "createdAt": "2025-06-21T15:00:00.000Z"
-    },
-    {
-      "id": "70704503",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/264263_2",
-      "name": "Salada 02 Horticultura Felicio 180g",
-      "categories": "Hortifruti",
-      "price": 4.5,
-      "brand": "Hf",
       "amount": 1,
       "createdAt": "2025-06-21T15:00:00.000Z"
     },

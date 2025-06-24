@@ -4,9 +4,9 @@ import { Loading } from "../shared/components/Loading/Loading";
 import { AuthPage } from "../features/auth/AuthPage";
 import { PublicRoute } from "./PublicRoute";
 import { PrivateRoute } from "./PrivateRoute";
+import { Products } from "../features/products";
 
 const Dashboard = lazy(() => import("../features/dashboard"));
-const Products = lazy(() => import("../features/products"));
 
 export const AppRoutes = () => {
   return (
