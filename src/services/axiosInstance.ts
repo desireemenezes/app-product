@@ -2,7 +2,7 @@ import axios from "axios";
 
 // instancia minha api de produtos criada na vercel
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:4000",
+  baseURL: "https://rest-json-server.onrender.com/",
   timeout: 5000,
   headers: {
     "Content-Type": "application/json",
