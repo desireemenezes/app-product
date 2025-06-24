@@ -11,7 +11,8 @@ export const SidebarContainer = styled.nav<SidebarContainerProps>`
 
   width: 180px;
   background-color: ${({ theme }) => theme.colors.backgroundContainer};
-  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1); // sombra leve na direita
+  box-shadow: 2px 0 6px ${({ theme }) =>
+    theme.colors.borderColor}; // sombra leve na direita
   padding: 1rem 0;
   position: fixed;
   top: 60px; // altura do header
@@ -52,14 +53,14 @@ export const MenuLink = styled.a`
   transition: opacity 0.2s ease;
 
   &:hover {
-    background-color: #00000015;
+    background-color: ${({ theme }) => theme.colors.borderColor};
   }
 `;
 
 export const Overlay = styled.div`
   position: fixed;
   inset: 0;
-  background: #00000088;
+  background: ${({ theme }) => theme.colors.borderColor};
   z-index: 900;
   @media (min-width: 769px) {
     display: none;

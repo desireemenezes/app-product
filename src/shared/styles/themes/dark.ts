@@ -3,6 +3,7 @@ export const darkTheme = {
   colors: {
     background: "#111", // fundo escuro típico (quase preto)
     backgroundContainer: "#161616",
+    borderColor: "#00000022",
     textLabel: "#fff",
     textLine: "#F5F5F5",
     text: "#ffffff", // texto claro para contraste

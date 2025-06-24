@@ -10,8 +10,8 @@ export const SplashWrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: ##fff;
-  color: #1e1e2f;
+  background-color: ${({ theme }) => theme.colors.backgroundContainer};
+  color: ${({ theme }) => theme.colors.borderColor};
   font-size: 1.5rem;
   font-weight: bold;
   animation: ${fade} 0.6s ease-in-out;

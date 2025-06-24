@@ -4,7 +4,7 @@ export const HeaderContainer = styled.header`
   width: 100%;
   padding: 20px;
   background-color: ${({ theme }) => theme.colors.primary};
-  color: #fff;
+  color: ${({ theme }) => theme.colors.backgroundContainer};
   display: flex;
   align-items: center;
   position: sticky;

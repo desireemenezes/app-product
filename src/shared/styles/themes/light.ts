@@ -4,6 +4,7 @@ export const lightTheme = {
     background: "#f9f9f9",
     backgroundContainer: "#fff",
     textLabel: "#191970",
+    borderColor: "#00000022",
     textLine: "#333",
     text: "#000", // preto roxo escuro (texto principal)
     error: "#B00020", // roxo acinzentado (textos secundários)

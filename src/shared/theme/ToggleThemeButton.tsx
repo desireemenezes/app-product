@@ -22,7 +22,7 @@ const IconButton = styled.button`
   border-radius: 50%;
   padding: 6px;
   cursor: pointer;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.backgroundContainer};
   display: flex;
   align-items: center;
   justify-content: center;

@@ -14,7 +14,7 @@ export const LoginForm = styled.form`
   background: ${({ theme }) => theme.colors.backgroundContainer};
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 10px #00000022;
+  box-shadow: 0 0 10px ${({ theme }) => theme.colors.borderColor};
 `;
 
 export const Title = styled.h2`
@@ -28,7 +28,7 @@ export const Input = styled.input`
   padding: 12px;
   margin-bottom: 1rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
   font-size: 1rem;
 `;
 
@@ -36,7 +36,7 @@ export const Button = styled.button`
   width: 100%;
   padding: 12px;
   background-color: ${({ theme }) => theme.colors.primary};
-  color: #fff;
+  color: ${({ theme }) => theme.colors.backgroundContainer};
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -92,7 +92,7 @@ export const SwitchContainer = styled.div`
 export const SwitchButton = styled.button`
   background: transparent;
   border: none;
-  color: #007bff;
+  color: ${({ theme }) => theme.colors.primary};
   cursor: pointer;
   padding: 0;
   font-size: 14px;
@@ -100,6 +100,5 @@ export const SwitchButton = styled.button`
   text-decoration: underline;
 
   &:hover {
-    color: #0056b3;
-  }
+     opacity: 0.8; /* aplica leve transparência ao hover */
 `;

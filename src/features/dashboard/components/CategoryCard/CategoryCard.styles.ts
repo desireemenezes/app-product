@@ -4,7 +4,7 @@ export const Card = styled.div`
   background-color: ${({ theme }) => theme.colors.backgroundContainer};
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  box-shadow: 0 2px 8px ${({ theme }) => theme.colors.borderColor};
   font-size: 1.1rem;
   display: flex;
   align-items: center;
@@ -65,7 +65,7 @@ export const CardsGrid = styled.div`
 export const CategoryName = styled.h3`
   margin: 0;
   font-size: 1rem;
-  color: #333;
+  color: ${({ theme }) => theme.colors.textLabel};
 `;
 
 export const Emoji = styled.span`

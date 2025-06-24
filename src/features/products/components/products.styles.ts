@@ -14,13 +14,13 @@ export const Th = styled.th`
   font-size: 14px;
   padding: 10px;
   text-align: left;
-  border-bottom: 1px solid #00000022;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
 `;
 
 export const Td = styled.td`
   font-size: 14px;
   padding: 10px;
-  border-bottom: 1px solid #00000022;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
 `;
 
 const pulse = keyframes`
